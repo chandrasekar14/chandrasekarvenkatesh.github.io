@@ -112,6 +112,19 @@ section{padding:90px 5vw;position:relative;z-index:1}
 .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
 .tag{font-size:0.68rem;font-weight:600;letter-spacing:0.06em;padding:4px 12px;border-radius:99px;background:rgba(108,99,255,0.15);border:1px solid rgba(108,99,255,0.25);color:var(--accent)}
 
+.completion-badge{display:flex;align-items:center;gap:12px;margin-top:1.2rem;padding:0.9rem 1.2rem;border-radius:10px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2)}
+.cb-icon{font-size:1.3rem;flex-shrink:0}
+.cb-title{font-size:0.82rem;font-weight:600;color:#4ade80}
+.cb-sub{font-size:0.72rem;color:var(--text-3);margin-top:2px}
+
+.best-intern-badge{display:flex;align-items:flex-start;gap:14px;margin-top:10px;padding:1.1rem 1.3rem;border-radius:12px;background:linear-gradient(135deg,rgba(255,200,0,0.12),rgba(255,150,0,0.08));border:1px solid rgba(255,200,0,0.35);position:relative;overflow:hidden}
+.best-intern-badge::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,215,0,0.05),transparent);pointer-events:none}
+.bib-left{flex-shrink:0}
+.bib-medal{font-size:2rem;filter:drop-shadow(0 0 8px rgba(255,200,0,0.6))}
+.bib-title{font-family:var(--syne);font-size:0.9rem;font-weight:800;color:#fcd34d;margin-bottom:0.3rem;letter-spacing:0.03em}
+.bib-desc{font-size:0.78rem;color:rgba(255,215,0,0.75);line-height:1.6;margin-bottom:0.3rem}
+.bib-meta{font-size:0.68rem;color:rgba(255,215,0,0.45);font-style:italic}
+
 /* PROJECTS */
 .projects-wrapper{display:flex;flex-direction:column;gap:20px}
 .proj-featured{border-radius:20px;overflow:hidden}
@@ -163,9 +176,28 @@ section{padding:90px 5vw;position:relative;z-index:1}
 .cert-name{font-size:0.88rem;font-weight:500;color:var(--text)}
 .cert-date{font-size:0.72rem;color:var(--text-3);margin-top:2px}
 
+.cert-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:2rem}
+.cert-card{border-radius:16px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;min-height:280px}
+.cert-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(108,99,255,0.2)}
+.cert-card-top{padding:1.2rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem;min-height:80px;justify-content:center;flex-shrink:0}
+.cert-logo{font-family:var(--syne);font-size:1.3rem;font-weight:800;color:#fff;letter-spacing:0.05em}
+.cert-issuer{font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
+.cert-card-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:0.5rem;flex:1}
+.cert-card-name{font-family:var(--syne);font-size:0.88rem;font-weight:700;color:var(--text);line-height:1.4}
+.cert-card-date{font-size:0.73rem;color:var(--text-2)}
+.cert-card-id{font-size:0.68rem;color:var(--text-3);font-family:monospace;word-break:break-all}
+.cert-verify-btn{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding:7px 14px;border-radius:99px;background:linear-gradient(135deg,var(--glow1),var(--glow2));color:#fff;font-size:0.73rem;font-weight:700;letter-spacing:0.06em;text-decoration:none;transition:all 0.25s;border:none;cursor:pointer;width:fit-content}
+.cert-verify-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(108,99,255,0.4)}
+.cert-verify-static{background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);color:#4ade80;cursor:default}
+.cert-verify-static:hover{transform:none;box-shadow:none}
+
+.cert-verify-gold{background:linear-gradient(135deg,#b45309,#d97706);color:#fff;cursor:default}
+.cert-verify-gold:hover{transform:none;box-shadow:0 6px 20px rgba(180,130,0,0.4)}
+
 /* CONTACT */
 #contact{background:linear-gradient(135deg,rgba(108,99,255,0.08),rgba(0,212,255,0.05));border-top:1px solid var(--glass-border)}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;max-width:900px}
+.cc-value{font-size:0.85rem;font-weight:500;color:var(--text);word-break:break-all;line-height:1.4}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;max-width:900px}
 .contact-card{padding:1.6rem 1.8rem;border-radius:16px;text-decoration:none;transition:all 0.3s}
 .contact-card:hover{background:var(--glass-hover);transform:translateY(-3px);box-shadow:0 12px 32px rgba(108,99,255,0.15)}
 .cc-label{font-size:0.65rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.5rem}
@@ -221,7 +253,7 @@ footer{position:relative;z-index:1;padding:1.5rem 5vw;display:flex;justify-conte
     <div class="hero-badge"><span class="badge-dot"></span>Open to Work · Software Engineer</div>
     <h1 class="hero-name">Chandrasekar<br><span class="grad">Venkatesh</span></h1>
     <div class="typing-line"><span id="typing-text"></span><span class="cursor-blink">|</span></div>
-    <p class="hero-sub">ECE graduate with hands-on Full Stack Java development experience building web applications using Java, Spring Boot, and MySQL. Based in Hosur, Tamil Nadu.</p>
+    <p class="hero-sub">B.E. ECE Graduate (2026) with hands-on experience in Full Stack Java development across 3 internships. Passionate about building clean, efficient software using Java, Spring Boot &amp; MySQL. IBM Certified · Open to Software Engineer Roles.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-glow">Get in Touch →</a>
       <a href="#experience" class="btn btn-glass">View Work</a>
@@ -246,12 +278,12 @@ footer{position:relative;z-index:1;padding:1.5rem 5vw;display:flex;justify-conte
     <div class="info-card glass">
       <div class="ic-label">Location</div>
       <div class="ic-value">Hosur, Tamil Nadu</div>
-      <div class="ic-sub">Open to Chennai &amp; remote roles</div>
+      <div class="ic-sub">Near Bangalore · Open to Relocate</div>
     </div>
     <div class="info-card glass">
       <div class="ic-label">Education</div>
       <div class="ic-value">B.E. Electronics &amp; Communication</div>
-      <div class="ic-sub">Adhiyamaan College · Anna University</div>
+      <div class="ic-sub">Adhiyamaan College · Anna University · 2026</div>
     </div>
   </div>
 </section>
@@ -279,7 +311,7 @@ footer{position:relative;z-index:1;padding:1.5rem 5vw;display:flex;justify-conte
     <div class="tl-item">
       <div class="tl-dot"></div>
       <div class="tl-card glass">
-        <div class="tl-period">Jul 2024 – Nov 2024</div>
+        <div class="tl-period">Jul 2025 – Nov 2025</div>
         <div class="tl-company">Surya Informatics Solutions Pvt. Ltd., Chennai</div>
         <div class="tl-role">Full Stack Java Intern</div>
         <div class="tl-body"><ul>
@@ -295,7 +327,29 @@ footer{position:relative;z-index:1;padding:1.5rem 5vw;display:flex;justify-conte
     <div class="tl-item">
       <div class="tl-dot"></div>
       <div class="tl-card glass">
-        <div class="tl-period">Jun 2024 – Jul 2024</div>
+        <div class="tl-period">22 Jul 2024 – 27 Jul 2024</div>
+        <div class="tl-company">Titan Company Limited · A TATA Enterprise, Hosur</div>
+        <div class="tl-role">Internship Trainee — Integrated Plating</div>
+        <div class="tl-body"><ul>
+          <li>Completed internship in the Integrated Plating division under Watches ISCM department</li>
+          <li>Gained hands-on exposure to the end-to-end manufacturing and assembly processes at a world-class TATA facility</li>
+          <li>Demonstrated strong commitment to responsibilities and eagerness to learn — commended for dedication and performance</li>
+        </ul></div>
+        <div class="tag-row"><span class="tag">Integrated Plating</span><span class="tag">Manufacturing</span><span class="tag">Watches ISCM</span><span class="tag">TATA Enterprise</span></div>
+        <div class="completion-badge">
+          <span class="cb-icon">🏢</span>
+          <div>
+            <div class="cb-title">Internship Certificate — Titan Company Limited</div>
+            <div class="cb-sub">Signed by Lalitha Sannidhi, Manager – People Function · Ref: PF/510/2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card glass">
+        <div class="tl-period">25 Jun 2025 – 24 Jul 2025</div>
         <div class="tl-company">Flash Fiber Network Ltd., Dharmapuri</div>
         <div class="tl-role">Web Development Intern</div>
         <div class="tl-body"><ul>
@@ -304,20 +358,46 @@ footer{position:relative;z-index:1;padding:1.5rem 5vw;display:flex;justify-conte
           <li>Followed Agile practices and version control fundamentals in a team-based environment</li>
         </ul></div>
         <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive Design</span><span class="tag">Git</span></div>
+        <div class="completion-badge">
+          <span class="cb-icon">🏆</span>
+          <div>
+            <div class="cb-title">Internship Completion Certificate</div>
+            <div class="cb-sub">Issued by Flash Fiber Network Ltd. · 20 Aug 2025 · Verified ✓</div>
+          </div>
+        </div>
+        <div class="best-intern-badge">
+          <div class="bib-left">
+            <div class="bib-medal">🥇</div>
+          </div>
+          <div class="bib-right">
+            <div class="bib-title">🏅 Best Intern Award</div>
+            <div class="bib-desc">Certificate of Appreciation — awarded for outstanding effort and honorable contribution in Web Development at Flash Fiber Network Ltd.</div>
+            <div class="bib-meta">Signed by Managing Director · Flash Fiber Network Ltd.</div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-dot"></div>
       <div class="tl-card glass">
-        <div class="tl-period">Mar 2026 – Present</div>
-        <div class="tl-company">Green Vision Pvt. Ltd.</div>
-        <div class="tl-role">Electronics Intern</div>
+        <div class="tl-period">31 Mar 2026 – Present</div>
+        <div class="tl-company">Green Vision Technologies Pvt. Ltd. (Relicell)</div>
+        <div class="tl-role">Production Trainee</div>
         <div class="tl-body"><ul>
-          <li>Involved in PCB assembly and soldering for lithium battery manufacturing systems</li>
-          <li>Gained practical exposure to electronics manufacturing processes, component identification, and quality checks</li>
+          <li>Engaged as Production Trainee at Relicell lead acid battery manufacturing facility, Kalukondapalli, Krishnagiri District</li>
+          <li>Assembled UPS units and performed quality checks on PCB, transformers, and batteries</li>
+          <li>Verified proper allocation and conversion of AC to DC and DC to AC current in UPS systems</li>
+          <li>Gained practical exposure to electronics manufacturing processes, component identification, and quality inspection</li>
         </ul></div>
-        <div class="tag-row"><span class="tag">PCB Assembly</span><span class="tag">Electronics Manufacturing</span><span class="tag">Lithium Battery Systems</span></div>
+        <div class="tag-row"><span class="tag">UPS Assembly</span><span class="tag">PCB Quality Check</span><span class="tag">Lead Acid Battery</span><span class="tag">AC/DC Conversion</span></div>
+        <div class="completion-badge">
+          <span class="cb-icon">📄</span>
+          <div>
+            <div class="cb-title">Offer Letter Issued</div>
+            <div class="cb-sub">Greenvision Technologies Pvt. Ltd. · 31 Mar 2026 · Verified ✓</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -399,9 +479,86 @@ footer{position:relative;z-index:1;padding:1.5rem 5vw;display:flex;justify-conte
       <div class="tag-row" style="margin-top:0.8rem"><span class="tag">Data Structures</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">Computer Networks</span></div>
     </div>
   </div>
-  <div class="cert-grid">
-    <div class="cert-item glass reveal"><div class="cert-icon">🏅</div><div><div class="cert-name">IBM SkillsBuild — AI Fundamentals &amp; Customer Engagement</div><div class="cert-date">April 2024</div></div></div>
-    <div class="cert-item glass reveal"><div class="cert-icon">🔒</div><div><div class="cert-name">Network Essentials &amp; Security Workshop</div><div class="cert-date">January 2025</div></div></div>
+  <div class="cert-cards-grid">
+
+    <div class="cert-card glass reveal">
+      <div class="cert-card-top" style="background:linear-gradient(135deg,rgba(30,30,30,0.8),rgba(60,60,60,0.6))">
+        <div class="cert-logo" style="font-size:1rem;letter-spacing:0.15em">TITAN</div>
+        <div class="cert-issuer">A TATA Enterprise · Hosur</div>
+      </div>
+      <div class="cert-card-body">
+        <div class="cert-card-name">Internship Completion Certificate — Integrated Plating</div>
+        <div class="cert-card-date">📅 22 Jul 2024 – 27 Jul 2024</div>
+        <div class="cert-card-id">Watches ISCM · Signed by Manager, People Function</div>
+        <div class="cert-verify-btn cert-verify-static">✓ Verified · Ref: PF/510/2024</div>
+      </div>
+    </div>
+
+    <div class="cert-card glass reveal">
+      <div class="cert-card-top" style="background:linear-gradient(135deg,rgba(180,130,0,0.6),rgba(120,80,0,0.5))">
+        <div class="cert-logo">🥇</div>
+        <div class="cert-issuer">Flash Fiber Network Ltd.</div>
+      </div>
+      <div class="cert-card-body">
+        <div class="cert-card-name">Best Intern — Certificate of Appreciation</div>
+        <div class="cert-card-date">📅 Issued: 25 Dec 2025</div>
+        <div class="cert-card-id">Web Development · Outstanding Performance</div>
+        <div class="cert-verify-btn cert-verify-gold">🏆 Award Certificate</div>
+      </div>
+    </div>
+
+    <div class="cert-card glass reveal">
+      <div class="cert-card-top" style="background:linear-gradient(135deg,rgba(0,80,200,0.4),rgba(0,40,120,0.3))">
+        <div class="cert-logo">IBM</div>
+        <div class="cert-issuer">IBM SkillsBuild</div>
+      </div>
+      <div class="cert-card-body">
+        <div class="cert-card-name">Artificial Intelligence Fundamentals</div>
+        <div class="cert-card-date">📅 Issued: 30 January 2025</div>
+        <div class="cert-card-id">Credential ID: P6RFmtl9</div>
+        <a href="https://www.credly.com/go/P6RFmtl9" target="_blank" class="cert-verify-btn">✓ Verify Certificate</a>
+      </div>
+    </div>
+
+    <div class="cert-card glass reveal">
+      <div class="cert-card-top" style="background:linear-gradient(135deg,rgba(0,80,200,0.4),rgba(100,0,150,0.3))">
+        <div class="cert-logo">IBM</div>
+        <div class="cert-issuer">IBM SkillsBuild</div>
+      </div>
+      <div class="cert-card-body">
+        <div class="cert-card-name">Customer Engagement: Communication &amp; Personality Dynamics</div>
+        <div class="cert-card-date">📅 Issued: 30 January 2025</div>
+        <div class="cert-card-id">Credential ID: bjqxEvwc</div>
+        <a href="https://www.credly.com/go/bjqxEvwc" target="_blank" class="cert-verify-btn">✓ Verify Certificate</a>
+      </div>
+    </div>
+
+    <div class="cert-card glass reveal">
+      <div class="cert-card-top" style="background:linear-gradient(135deg,rgba(0,150,100,0.4),rgba(0,80,50,0.3))">
+        <div class="cert-logo">🔒</div>
+        <div class="cert-issuer">Workshop Certificate</div>
+      </div>
+      <div class="cert-card-body">
+        <div class="cert-card-name">Network Essentials &amp; Security Fundamentals</div>
+        <div class="cert-card-date">📅 Issued: January 2025</div>
+        <div class="cert-card-id">Networking Basics · Security Workshop</div>
+        <div class="cert-verify-btn cert-verify-static">✓ Certified</div>
+      </div>
+    </div>
+
+    <div class="cert-card glass reveal">
+      <div class="cert-card-top" style="background:linear-gradient(135deg,rgba(34,197,94,0.3),rgba(16,100,50,0.3))">
+        <div class="cert-logo">GV</div>
+        <div class="cert-issuer">Greenvision Technologies</div>
+      </div>
+      <div class="cert-card-body">
+        <div class="cert-card-name">Production Trainee — Offer Letter</div>
+        <div class="cert-card-date">📅 Issued: 31 March 2026</div>
+        <div class="cert-card-id">Lead Acid Battery · UPS Assembly · Relicell</div>
+        <div class="cert-verify-btn cert-verify-static">✓ Verified Offer</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -413,7 +570,8 @@ footer{position:relative;z-index:1;padding:1.5rem 5vw;display:flex;justify-conte
     <a href="tel:+918838403285" class="contact-card glass"><div class="cc-label">Phone</div><div class="cc-value">+91 88384 03285</div></a>
     <a href="mailto:chandrasekarace11@gmail.com" class="contact-card glass"><div class="cc-label">Email</div><div class="cc-value">chandrasekarace11@gmail.com</div></a>
     <a href="https://linkedin.com/in/chandrasekar-v" target="_blank" class="contact-card glass"><div class="cc-label">LinkedIn</div><div class="cc-value">linkedin.com/in/chandrasekar-v</div></a>
-    <div class="contact-card glass"><div class="cc-label">Location</div><div class="cc-value">Hosur, Tamil Nadu</div></div>
+    <a href="https://chandrasekarvenkatesh.github.io" target="_blank" class="contact-card glass"><div class="cc-label">Portfolio</div><div class="cc-value">chandrasekarvenkatesh.github.io</div></a>
+    <div class="contact-card glass"><div class="cc-label">Location</div><div class="cc-value">Hosur, Tamil Nadu</div><div style="font-size:0.72rem;color:var(--accent2);margin-top:4px;font-weight:500">Near Bangalore · Open to Relocate</div></div>
   </div>
 </section>
 
